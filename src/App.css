@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@keyframes starPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.75);
+    opacity: 0.5;
+  }
+}
+
+.animate-starPulse {
+  animation: starPulse 1.6s ease-in-out infinite;
+  transform-origin: center;
+}
