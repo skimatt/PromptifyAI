@@ -1,69 +1,50 @@
-# React + TypeScript + Vite
+# 📸 PromptifyAI: Image-to-Prompt AI Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Technology](https://img.shields.io/badge/Vite-646CFF.svg?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Technology](https://img.shields.io/badge/React-61DAFB.svg?style=flat&logo=react&logoColor=white)](https://reactjs.org/)
+[![Technology](https://img.shields.io/badge/TypeScript-3178C6.svg?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Technology](https://img.shields.io/badge/Tailwind_CSS-06B6D4.svg?style=flat&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Technology](https://img.shields.io/badge/Gemini_API-F1502F.svg?style=flat&logo=google&logoColor=white)](https://ai.google.dev/models/gemini)
 
-Currently, two official plugins are available:
+## ✨ Deskripsi Proyek
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**PromptifyAI** adalah aplikasi web modern yang mengubah gambar menjadi prompt AI yang terstruktur dan detail. Dibangun dengan **React, Vite, TypeScript, dan Tailwind CSS**, aplikasi ini memanfaatkan kekuatan **Google Gemini API** untuk menganalisis visual dan menghasilkan deskripsi teks yang dapat digunakan di berbagai platform AI generatif seperti Midjourney, DALL·E, dan Leonardo AI.
 
-## Expanding the ESLint configuration
+Fitur utama:
+* **Generasi Prompt**: Unggah gambar dan dapatkan prompt yang dioptimalkan dalam format JSON.
+* **Antarmuka Pengguna Modern**: Desain minimalis, profesional, dan responsif dengan animasi yang halus.
+* **Integrasi API**: Berkomunikasi dengan Worker Cloudflare yang terhubung ke Gemini API.
+* **Drag & Drop**: Pengalaman unggah gambar yang intuitif.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Instalasi dan Penggunaan
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Ikuti langkah-langkah sederhana ini untuk menjalankan proyek secara lokal.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Prasyarat
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Pastikan Anda telah menginstal [Node.js](https://nodejs.org/) dan [npm](https://www.npmjs.com/) di sistem Anda.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Langkah-langkah
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1.  **Clone repositori:**
+    ```bash
+    git clone [https://github.com/your-username/promptifyai.git](https://github.com/your-username/promptifyai.git)
+    cd promptifyai
+    ```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2.  **Instal dependensi:**
+    ```bash
+    npm install
+    ```
+
+3.  **Konfigurasi API Worker:**
+    Aplikasi ini bergantung pada API Worker yang Anda buat dan jalankan. Pastikan Anda telah mengganti URL `https://skimatt.rahmatyoung10.workers.dev/` di file `src/services/geminiService.ts` dengan URL Worker Anda sendiri.
+
+4.  **Jalankan aplikasi:**
+    ```bash
+    npm run dev
+    ```
+    Aplikasi akan berjalan di `http://localhost:5173`.
+
+## 📦 Struktur Proyek
