@@ -71,7 +71,7 @@ const Navbar = () => {
             Tentang AI
           </button>
           <button
-            onClick={() => handleNavClick('contact')}
+            onClick={() => handleNavClick('about')}
             className="hover:text-blue-600 transition duration-200"
           >
             Kontak
