@@ -29,8 +29,8 @@ Pastikan Anda telah menginstal [Node.js](https://nodejs.org/) dan [npm](https://
 
 1.  **Clone repositori:**
     ```bash
-    git clone [https://github.com/your-username/promptifyai.git](https://github.com/your-username/promptifyai.git)
-    cd promptifyai
+    git clone https://github.com/skimatt/PromptifyAI.git)
+    cd PromptifyAI
     ```
 
 2.  **Instal dependensi:**
